@@ -1,8 +1,8 @@
 # provider, region, access and secret key
 provider "aws" {
     region = "us-west-1"
-    access_key = "AKIAYODDKO36FSP3ZFM3"
-    secret_key = "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"
+    access_key = ${{ secrets.AWS_ACCESS_KEY_ID }}
+    secret_key = ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 }
 
 # role and inline policy for lambda function to access dynamodb table
