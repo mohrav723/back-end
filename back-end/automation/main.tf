@@ -5,6 +5,16 @@ provider "aws" {
     secret_key = ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 }
 
+terraform {
+  cloud {
+    organization = "mohitrav"
+
+    workspaces {
+      name = "cicd"
+    }
+  }
+}
+
 # role and inline policy for lambda function to access dynamodb table
 
 resource "aws_iam_role_policy" "terraform_lambda_policy" {
