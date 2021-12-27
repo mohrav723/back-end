@@ -1,6 +1,6 @@
 # provider, region, access and secret key
 provider "aws" {
-    region = "us-west-2"
+    region = "us-west-1"
 }
 
 terraform {
