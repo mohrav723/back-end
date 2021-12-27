@@ -45,25 +45,21 @@
 name: 'Terraform'
 
 on:
+  pull_request:
   push:
     branches:
-    - dev
-  pull_request:
+    - main
+  
 
 jobs:
   terraform:
     name: 'deploy'
     runs-on: ubuntu-latest
-
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    defaults:
-      run:
-        shell: bash
-
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+
 
 
 
