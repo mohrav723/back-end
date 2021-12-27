@@ -10,7 +10,7 @@ terraform {
     organization = "mohitrav"
 
     workspaces {
-      name = "cicd"
+      name = "backend"
     }
   }
 }
