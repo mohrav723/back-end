@@ -20,11 +20,11 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
-        working-directory: back-end/automation
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
       - name: Terraform Plan
+        working-directory: back-end/automation
         id: plan
         if: github.event_name == 'pull_request'
         run: terraform plan -no-color
