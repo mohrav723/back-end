@@ -18,9 +18,11 @@ jobs:
            # terraform_version: 0.13.0
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
       - name: Terraform Init
+        working-directory: back-end/automation
         id: init
         run: terraform init
       - name: Terraform Validate
+        working-directory: back-end/automation
         id: validate
         run: terraform validate -no-color
       - name: Terraform Plan
